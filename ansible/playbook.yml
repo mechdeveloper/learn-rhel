@@ -1,0 +1,10 @@
+- hosts: RHEL001
+  tasks:
+    - name: Ping test
+      ansible.builtin.ping:
+    - name: installing podman
+      package:
+        name: "podman"
+        state: present
+      become: true
+  
